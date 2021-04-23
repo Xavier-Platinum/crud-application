@@ -1,0 +1,4 @@
+/node_modules
+/client
+/.secret.txt
+/.vscode
