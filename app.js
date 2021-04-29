@@ -28,5 +28,5 @@ app.use("/", defaultRoutes);
 
 
 app.listen(PORT, () => {
-    console.log(`Server is listening at http://localhost:${PORT}`);
+    console.log(`Server is listening at %port ${PORT} && %env ${app.settings.env}`);
 })
