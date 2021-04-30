@@ -1,29 +1,21 @@
+const { Employee } = require("../models/employees/model.employee");
+
 module.exports = {
-    index: (req, res) => {
-        const employees = [
-            {
-                "_id": "1",
-                "name": "Khairat Adam",
-                "email": "khairy@gmail.com",
-                "address": "No1 Bukuru",
-                "phone": 09088899966
-            },
-            {
-                "_id": "2",
-                "name": "Nanbyen",
-                "email": "nanbyen@yahoo.com",
-                "address": "No5 Rutsau",
-                "phone": 0987654321
-            },
-            {
-                "_id": "1",
-                "name": "Lawrence",
-                "email": "lawrence@gmail.com",
-                "address": "No11 Odus Village",
-                "phone": 567891234
-            }
-        ]
-        res.render("defaultViews/index", { employees});
+    /**
+     * 
+     * @param {*GET} req 
+     * @param {*POST} res 
+     */
+    index: async(req, res) => {
+        /**
+         * 
+         * @package { name, email, phone, address } data
+         * 
+         */
+        await Employee.find({})
+        .exec()
+        
+        res.render("defaultViews/index", { });
     },
     users: (req, res) => {
         const people = [
