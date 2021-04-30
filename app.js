@@ -10,6 +10,12 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
+// trials
+// if (app.settings.env == ("development")) {
+//     console.log("Local");
+// } else {
+//     console.log("Global");
+// }
 
 // setting up morgan
 app.use(logger("dev"));
